@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
-def index(Request):
+def index(request):
     '''This is a demo borrowed from tango with django
        it has absolutely no use here'''
-    return HttpResponse("Davneet says I will fucking do it")
+    context_dict={'message':'Keep up the pace bro'}
+    return render(request,'index.html',context_dict)
+
