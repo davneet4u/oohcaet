@@ -15,7 +15,7 @@ if settings.DEBUG:  #the conditional statements check if our django project is r
     urlpatterns+=patterns(
                            'django.views.static',
                            (r'^media/(?P<path>.*)',
-                            serve,
+                            'serve',
                             {'document_root':settings.MEDIA_ROOT}), )
 ''' If debug is true, additional url pattern is added to urlpatterns tuple. 
     The pattern states that for any file requested with a URL starting with media/,
