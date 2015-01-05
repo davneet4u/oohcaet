@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+TEMPLATE_PATH=os.path.join(BASE_DIR,templates) #joining BASE_DIR with templates in order to templates folder
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -26,7 +26,12 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# PAths of directories, template directory
 
+TEMPLATE_DIRS=[
+              '''Adding template path in template directory'''
+              TEMPLATE_PATH,
+              ]
 # Application definition
 
 INSTALLED_APPS = (
