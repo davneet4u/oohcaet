@@ -7,9 +7,9 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from .keys import * #Imported all the secret keys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 TEMPLATE_PATH = os.path.join(BASE_DIR,'templates') #joining BASE_DIR with templates in order to templates folder
 STATIC_PATH = os.path.join(BASE_DIR,'static')
@@ -18,8 +18,6 @@ STATIC_PATH = os.path.join(BASE_DIR,'static')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@z-@f6iofel-x7#j(h22iur!oa_*ur*vtjkm^2i04fj-&n&q0r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
